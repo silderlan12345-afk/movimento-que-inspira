@@ -1,0 +1,159 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #0f172a;
+  color: white;
+  text-align: center;
+}
+
+/* HEADER */
+header {
+  background: linear-gradient(90deg, #2563eb, #22c55e);
+  padding: 30px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+header p {
+  opacity: 0.9;
+}
+
+/* BANNER */
+.banner img {
+  width: 90%;
+  max-width: 900px;
+  border-radius: 15px;
+  margin-top: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+/* TITULOS */
+h2 {
+  margin-top: 40px;
+}
+
+/* RANKING GRID */
+.ranking {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 30px;
+}
+
+/* CARD */
+.card {
+  background: #1e293b;
+  border-radius: 15px;
+  padding: 20px;
+  transition: 0.3s;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* FOTO */
+.foto {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+/* PODIO */
+.podio {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 30px;
+  flex-wrap: wrap;
+}
+
+.podio div {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 15px;
+  animation: subir 1s;
+  width: 120px;
+}
+
+/* ANIMAÇÃO */
+@keyframes subir {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* BOTÕES */
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #22c55e;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #16a34a;
+}
+
+/* INPUTS */
+input, select {
+  padding: 10px;
+  margin: 5px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+
+/* PAINEL */
+.painel {
+  display: none;
+  margin-top: 20px;
+}
+
+/* GRAFICO */
+.grafico {
+  width: 90%;
+  max-width: 600px;
+  margin: auto;
+}
+
+/* DESAFIO */
+.desafio {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 12px;
+  margin: 20px;
+}
+
+/* FOOTER */
+footer {
+  background: #020617;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  .podio {
+    flex-direction: column;
+    align-items: center;
+  }
+}
