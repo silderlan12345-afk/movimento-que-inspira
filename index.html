@@ -27,9 +27,11 @@
 <p>Projeto idealizado pelo Professor Wellyngton Pinheiro</p>
 </header>
 
+<!-- RANKING -->
 <h2>🥇 Ranking Geral</h2>
 <div id="ranking" class="ranking"></div>
 
+<!-- FILTRO -->
 <h2>🏫 Ranking por Turma</h2>
 
 <select id="filtroTurma" onchange="filtrarTurma()">
@@ -40,21 +42,26 @@
 
 <div id="rankingTurma" class="ranking"></div>
 
+<!-- GRAFICO -->
 <h2>📊 Gráfico</h2>
 <canvas id="grafico"></canvas>
 
+<!-- DESAFIO -->
 <h2>📅 Desafio da Semana</h2>
 <div class="desafio">
 <p id="textoDesafio">Nenhum desafio cadastrado.</p>
 </div>
 
+<!-- LOGIN -->
 <section class="login">
 <h2>Área do Professor</h2>
-<input type="password" id="senha" placeholder="Senha">
+<input type="password" id="senha" placeholder="Digite a senha">
 <button onclick="login()">Entrar</button>
 </section>
 
-<section id="painel" style="display:none;">
+<!-- PAINEL -->
+<section id="painel" class="painel" style="display:none;">
+
 <h2>Painel do Professor</h2>
 
 <input id="nome" placeholder="Nome do aluno">
@@ -65,18 +72,23 @@
 <option value="9B">9º B</option>
 </select>
 
+<!-- FOTO -->
+<input id="foto" placeholder="Link da foto do aluno">
+
 <button onclick="adicionarAluno()">Adicionar aluno</button>
 
 <h3>📅 Criar Desafio</h3>
 <input id="desafioInput" placeholder="Digite o desafio">
-<button onclick="criarDesafio()">Salvar</button>
+<button onclick="criarDesafio()">Salvar desafio</button>
 
 </section>
 
+<!-- RODAPÉ -->
 <footer>
 <p>Projeto Movimento que Inspira • Educação Física</p>
 </footer>
 
+<!-- SCRIPT -->
 <script src="script.js"></script>
 
 </body>
