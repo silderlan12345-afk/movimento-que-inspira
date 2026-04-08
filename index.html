@@ -8,11 +8,17 @@
 <title>Movimento que Inspira</title>
 
 <link rel="stylesheet" href="style.css">
+
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 </head>
 
 <body>
+
+<!-- IMAGEM NO TOPO -->
+<section class="banner">
+  <img src="projeto.jpg" alt="Projeto Movimento que Inspira">
+</section>
 
 <header>
 <h1>🏆 Movimento que Inspira</h1>
@@ -20,10 +26,6 @@
 <h3>EMTI Joaquim Napoleão Pinheiro</h3>
 <p>Projeto idealizado pelo Professor Wellyngton Pinheiro</p>
 </header>
-
-<section class="banner">
-<img src="projeto.jpg">
-</section>
 
 <h2>🥇 Ranking Geral</h2>
 <div id="ranking" class="ranking"></div>
@@ -48,28 +50,32 @@
 
 <section class="login">
 <h2>Área do Professor</h2>
-<input type="password" id="senha">
+<input type="password" id="senha" placeholder="Senha">
 <button onclick="login()">Entrar</button>
 </section>
 
 <section id="painel" style="display:none;">
-<h2>Painel</h2>
+<h2>Painel do Professor</h2>
 
-<input id="nome" placeholder="Nome">
-<input id="pontos" type="number">
+<input id="nome" placeholder="Nome do aluno">
+<input id="pontos" type="number" placeholder="Pontuação">
 
 <select id="turma">
 <option value="9A">9º A</option>
 <option value="9B">9º B</option>
 </select>
 
-<button onclick="adicionarAluno()">Adicionar</button>
+<button onclick="adicionarAluno()">Adicionar aluno</button>
 
-<h3>Desafio</h3>
-<input id="desafioInput">
+<h3>📅 Criar Desafio</h3>
+<input id="desafioInput" placeholder="Digite o desafio">
 <button onclick="criarDesafio()">Salvar</button>
 
 </section>
+
+<footer>
+<p>Projeto Movimento que Inspira • Educação Física</p>
+</footer>
 
 <script src="script.js"></script>
 
