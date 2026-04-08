@@ -1,32 +1,27 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Movimento que Inspira</title>
 
-<title>Movimento que Inspira</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json" />
 
-<link rel="stylesheet" href="style.css">
-<link rel="manifest" href="manifest.json">
-
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
 
 <header>
-
-<h1>🏆 Movimento que Inspira</h1>
-<h3>Movimente-se, cuide da sua saúde e inspire seus colegas!</h3>
-<h3>EMTI Joaquim Napoleão Pinheiro</h3>
-<p>Projeto idealizado pelo Professor Wellyngton Pinheiro</p>
-
+  <h1>🏆 Movimento que Inspira</h1>
+  <h3>Movimente-se, cuide da sua saúde e inspire seus colegas!</h3>
+  <h3>EMTI Joaquim Napoleão Pinheiro</h3>
+  <p>Projeto idealizado pelo Professor Wellyngton Pinheiro</p>
 </header>
 
 <section class="banner">
-<img src="projeto.jpg" alt="Projeto">
+  <img src="projeto.jpg" alt="Projeto" />
 </section>
 
 <h2>🥇 Pódio dos Campeões</h2>
@@ -37,67 +32,59 @@
 
 <h2>🏫 Ranking por Turma</h2>
 
-<select id="filtroTurma" onchange="filtrarTurma()">
-<option value="todas">Todas</option>
-<option value="9A">9º A</option>
-<option value="9B">9º B</option>
+<select id="filtroTurma">
+  <option value="todas">Todas</option>
+  <option value="9A">9º A</option>
+  <option value="9B">9º B</option>
 </select>
 
 <div id="rankingTurma" class="ranking"></div>
 
 <section class="grafico">
-<h2>📊 Pontuação dos Alunos</h2>
-<canvas id="grafico"></canvas>
+  <h2>📊 Pontuação dos Alunos</h2>
+  <canvas id="grafico"></canvas>
 </section>
 
 <h2>📅 Desafio da Semana</h2>
 <div class="desafio">
-<p id="textoDesafio">Nenhum desafio cadastrado.</p>
+  <p id="textoDesafio">Nenhum desafio cadastrado.</p>
 </div>
 
-<h2>📷 Atividades dos Alunos</h2>
-<div id="feedAtividades" class="ranking"></div>
-
 <section class="login">
-<h2>Área do Professor</h2>
-<input type="password" id="senha" placeholder="Senha">
-<button onclick="login()">Entrar</button>
+  <h2>Área do Professor</h2>
+  <input type="password" id="senha" placeholder="Senha" />
+  <button id="btnLogin">Entrar</button>
 </section>
 
 <section id="painel" class="painel" style="display:none;">
+  <h2>Painel do Professor</h2>
 
-<h2>Painel do Professor</h2>
+  <input id="nome" placeholder="Nome do aluno" />
+  <input id="pontos" type="number" placeholder="Pontuação" />
 
-<input id="nome" placeholder="Nome do aluno">
-<input id="pontos" type="number" placeholder="Pontuação">
+  <select id="turma">
+    <option value="9A">9º A</option>
+    <option value="9B">9º B</option>
+  </select>
 
-<select id="turma">
-<option value="9A">9º A</option>
-<option value="9B">9º B</option>
-</select>
+  <input type="text" id="foto" placeholder="URL da foto (opcional)" />
 
-<input type="file" id="foto">
+  <button id="btnAdicionar">Adicionar aluno</button>
 
-<button onclick="adicionarAluno()">Adicionar aluno</button>
-
-<h3>📅 Criar Desafio da Semana</h3>
-
-<input id="desafioInput" placeholder="Digite o desafio">
-<button onclick="criarDesafio()">Salvar desafio</button>
-
+  <h3>📅 Criar Desafio da Semana</h3>
+  <input id="desafioInput" placeholder="Digite o desafio" />
+  <button id="btnDesafio">Salvar desafio</button>
 </section>
 
-<h2>📊 Histórico Semanal</h2>
-<canvas id="graficoHistorico"></canvas>
-
 <h2>🖥 Painel Telão</h2>
-<button onclick="modoTelao()">Ativar Modo Telão</button>
+<button id="btnTelao">Ativar Modo Telão</button>
 
 <footer>
-<p>Projeto Movimento que Inspira • Educação Física</p>
+  <p>Projeto Movimento que Inspira • Educação Física</p>
 </footer>
 
-<script src="script.js"></script>
+<!-- SCRIPT PRINCIPAL -->
+<script type="module" src="script.js"></script>
 
 </body>
 </html>
