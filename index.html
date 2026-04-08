@@ -8,16 +8,15 @@
 <title>Movimento que Inspira</title>
 
 <link rel="stylesheet" href="style.css">
-
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 </head>
 
 <body>
 
-<!-- IMAGEM NO TOPO -->
+<!-- IMAGEM TOPO -->
 <section class="banner">
-  <img src="projeto.jpg" alt="Projeto Movimento que Inspira">
+<img src="projeto.jpg" alt="Projeto">
 </section>
 
 <header>
@@ -27,68 +26,49 @@
 <p>Projeto idealizado pelo Professor Wellyngton Pinheiro</p>
 </header>
 
-<!-- RANKING -->
 <h2>🥇 Ranking Geral</h2>
-<div id="ranking" class="ranking"></div>
+<div id="ranking"></div>
 
-<!-- FILTRO -->
 <h2>🏫 Ranking por Turma</h2>
-
 <select id="filtroTurma" onchange="filtrarTurma()">
 <option value="todas">Todas</option>
 <option value="9A">9º A</option>
 <option value="9B">9º B</option>
 </select>
 
-<div id="rankingTurma" class="ranking"></div>
+<div id="rankingTurma"></div>
 
-<!-- GRAFICO -->
 <h2>📊 Gráfico</h2>
 <canvas id="grafico"></canvas>
 
-<!-- DESAFIO -->
 <h2>📅 Desafio da Semana</h2>
-<div class="desafio">
-<p id="textoDesafio">Nenhum desafio cadastrado.</p>
-</div>
+<p id="textoDesafio">Nenhum desafio</p>
 
-<!-- LOGIN -->
-<section class="login">
-<h2>Área do Professor</h2>
-<input type="password" id="senha" placeholder="Digite a senha">
+<h2>🔐 Professor</h2>
+<input type="password" id="senha">
 <button onclick="login()">Entrar</button>
-</section>
 
-<!-- PAINEL -->
-<section id="painel" class="painel" style="display:none;">
+<div id="painel" style="display:none;">
 
-<h2>Painel do Professor</h2>
-
-<input id="nome" placeholder="Nome do aluno">
-<input id="pontos" type="number" placeholder="Pontuação">
+<input id="nome" placeholder="Nome">
+<input id="pontos" type="number" placeholder="Pontos">
 
 <select id="turma">
-<option value="9A">9º A</option>
-<option value="9B">9º B</option>
+<option value="9A">9A</option>
+<option value="9B">9B</option>
 </select>
 
 <!-- FOTO -->
-<input id="foto" placeholder="Link da foto do aluno">
+<input id="foto" placeholder="Link da imagem (imgur)">
 
-<button onclick="adicionarAluno()">Adicionar aluno</button>
+<button onclick="adicionarAluno()">Adicionar</button>
 
-<h3>📅 Criar Desafio</h3>
-<input id="desafioInput" placeholder="Digite o desafio">
-<button onclick="criarDesafio()">Salvar desafio</button>
+<h3>Desafio</h3>
+<input id="desafioInput">
+<button onclick="criarDesafio()">Salvar</button>
 
-</section>
+</div>
 
-<!-- RODAPÉ -->
-<footer>
-<p>Projeto Movimento que Inspira • Educação Física</p>
-</footer>
-
-<!-- SCRIPT -->
 <script src="script.js"></script>
 
 </body>
