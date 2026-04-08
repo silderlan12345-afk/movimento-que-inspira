@@ -1,35 +1,75 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Movimento que Inspira</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Movimento que Inspira</title>
+
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </head>
 
 <body>
 
+<header>
 <h1>🏆 Movimento que Inspira</h1>
+<h3>Movimente-se, cuide da sua saúde e inspire seus colegas!</h3>
+<h3>EMTI Joaquim Napoleão Pinheiro</h3>
+<p>Projeto idealizado pelo Professor Wellyngton Pinheiro</p>
+</header>
 
-<h2>Ranking</h2>
-<div id="ranking"></div>
+<section class="banner">
+<img src="projeto.jpg">
+</section>
 
-<h2>Login do Professor</h2>
-<input type="password" id="senha" placeholder="Senha">
-<button onclick="login()">Entrar</button>
+<h2>🥇 Ranking Geral</h2>
+<div id="ranking" class="ranking"></div>
 
-<div id="painel" style="display:none;">
-  <h3>Painel do Professor</h3>
+<h2>🏫 Ranking por Turma</h2>
 
-  <input id="nome" placeholder="Nome do aluno">
-  <input id="pontos" type="number" placeholder="Pontos">
+<select id="filtroTurma" onchange="filtrarTurma()">
+<option value="todas">Todas</option>
+<option value="9A">9º A</option>
+<option value="9B">9º B</option>
+</select>
 
-  <select id="turma">
-    <option value="9A">9A</option>
-    <option value="9B">9B</option>
-  </select>
+<div id="rankingTurma" class="ranking"></div>
 
-  <button onclick="adicionarAluno()">Adicionar</button>
+<h2>📊 Gráfico</h2>
+<canvas id="grafico"></canvas>
+
+<h2>📅 Desafio da Semana</h2>
+<div class="desafio">
+<p id="textoDesafio">Nenhum desafio cadastrado.</p>
 </div>
+
+<section class="login">
+<h2>Área do Professor</h2>
+<input type="password" id="senha">
+<button onclick="login()">Entrar</button>
+</section>
+
+<section id="painel" style="display:none;">
+<h2>Painel</h2>
+
+<input id="nome" placeholder="Nome">
+<input id="pontos" type="number">
+
+<select id="turma">
+<option value="9A">9º A</option>
+<option value="9B">9º B</option>
+</select>
+
+<button onclick="adicionarAluno()">Adicionar</button>
+
+<h3>Desafio</h3>
+<input id="desafioInput">
+<button onclick="criarDesafio()">Salvar</button>
+
+</section>
 
 <script src="script.js"></script>
 
